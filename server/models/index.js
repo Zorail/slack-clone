@@ -4,11 +4,11 @@ import config from './config'
 const sequelize = new Sequelize(config.database, config.username, config.password);
 
 const models = {
-  user: sequelize.import('./user'),
-  channel: sequelize.import('./channel'),
-  team: sequelize.import('./team'),
-  member: sequelize.import('./member'),
-  message: sequelize.import('./message'),
+  User: sequelize.import('./user'),
+  Channel: sequelize.import('./channel'),
+  Team: sequelize.import('./team'),
+  Member: sequelize.import('./member'),
+  Message: sequelize.import('./message'),
 };
 
 Object.keys(models).forEach((modelName) => {
