@@ -25,4 +25,4 @@ models.sequelize.sync({ force: true }).then(() => {
   app.listen(8080);
 });
 
-app.listen(8080);
+app.listen(8081);

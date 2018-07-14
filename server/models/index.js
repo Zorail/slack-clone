@@ -8,8 +8,8 @@ const sequelize = new Sequelize(config.database, config.username, config.passwor
 const models = {
   User: sequelize.import('./user'),
   Channel: sequelize.import('./channel'),
-  Team: sequelize.import('./team'),
   Message: sequelize.import('./message'),
+  Team: sequelize.import('./team'),
 };
 
 Object.keys(models).forEach((modelName) => {
