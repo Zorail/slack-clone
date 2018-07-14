@@ -1,13 +1,14 @@
 import Sequelize from 'sequelize';
 import config from './config';
 
-const sequelize = new Sequelize(config.database, config.username, config.password);
+const sequelize = new Sequelize(config.database, config.username, config.password, {
+  dialect: 'postgres',
+});
 
 const models = {
   User: sequelize.import('./user'),
   Channel: sequelize.import('./channel'),
   Team: sequelize.import('./team'),
-  Member: sequelize.import('./member'),
   Message: sequelize.import('./message'),
 };
 
