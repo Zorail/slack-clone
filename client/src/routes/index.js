@@ -5,12 +5,17 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import Home from '../Containers/index';
+import {
+  Home,
+  Register,
+}
+  from '../Containers/index';
 
 const route = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Home} />
+      <Route path="/register" exact component={Register} />
     </Switch>
   </BrowserRouter>
 );

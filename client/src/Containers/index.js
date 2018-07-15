@@ -1,3 +1,7 @@
 import Home from './Home/index';
+import Register from './Register/index';
 
-export default Home;
+export {
+  Home,
+  Register,
+};
