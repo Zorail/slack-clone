@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ApolloClient, createNetworkInterface, ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
 import Routes from './routes';
 import registerServiceWorker from './registerServiceWorker';
 
-const networkInterface = createNetworkInterface({
+
+const client = new ApolloClient({
   uri: 'http://localhost:8081/graphql',
 });
 
-const client = new ApolloClient({
-  networkInterface,
-});
-
-const App = (
+const App = () => (
   <ApolloProvider client={client}>
     <Routes />
   </ApolloProvider>

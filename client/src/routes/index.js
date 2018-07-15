@@ -7,10 +7,12 @@ import {
 
 import Home from '../Containers/index';
 
-export default () => (
+const route = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={Home} />
     </Switch>
   </BrowserRouter>
 );
+
+export default route;

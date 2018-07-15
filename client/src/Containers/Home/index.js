@@ -13,7 +13,8 @@ const Home = ({ data: { loading, allUsers } }) => (
 const allUsersQuery = gql`
   {
     allUsers {
-      email
+      email,
+      id
     }
   }
 `;
