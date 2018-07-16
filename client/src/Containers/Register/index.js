@@ -117,7 +117,9 @@ const registerMutation = gql`
           path
           message
         }
-        user
+        user {
+          email
+        }
     }
   }
 `;

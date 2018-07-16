@@ -13,7 +13,7 @@ export default `
 
     type RegisterResponse {
         ok: Boolean!
-        user: User!
+        user: User
         errors: [Error!]
     }
 
