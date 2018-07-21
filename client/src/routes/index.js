@@ -9,6 +9,7 @@ import {
   Home,
   Register,
   Login,
+  CreateTeam,
 }
   from '../Containers/index';
 
@@ -18,6 +19,7 @@ const route = () => (
       <Route path="/" exact component={Home} />
       <Route path="/register" exact component={Register} />
       <Route path="/login" exact component={Login} />
+      <Route path="/createTeam" exact component={CreateTeam} />
     </Switch>
   </BrowserRouter>
 );
