@@ -20,7 +20,6 @@ class Login extends React.Component {
     const response = await this.props.mutate({
       variables: { email, password },
     });
-    console.log(response)
     const { ok, token, refreshToken } = response.data.login;
     if (ok) {
       localStorage.setItem('token', token);
@@ -28,7 +27,7 @@ class Login extends React.Component {
     }
   };
 
-  onChange = e => {
+  onChange = (e) => {
     const { name, value } = e.target;
     this[name] = value;
   };
@@ -38,7 +37,9 @@ class Login extends React.Component {
 
     return (
       <Container text>
-        <Header as="h2">Login</Header>
+        <Header as="h2">
+          Login
+        </Header>
         <Input name="email" onChange={this.onChange} value={email} placeholder="Email" fluid />
         <Input
           name="password"
@@ -48,7 +49,9 @@ class Login extends React.Component {
           placeholder="Password"
           fluid
         />
-        <Button onClick={this.onSubmit}>Submit</Button>
+        <Button onClick={this.onSubmit}>
+          Submit
+        </Button>
       </Container>
     );
   }
