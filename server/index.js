@@ -20,8 +20,13 @@ const schema = makeExecutableSchema({
   resolvers,
 });
 
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  credentials: true,
+};
+
 const app = express();
-app.use(cors('*'));
+app.use(cors(corsOptions));
 
 const graphqlEndpoint = '/graphql';
 
