@@ -61,8 +61,8 @@ app.use(
     context: {
       models, user: req.user, SECRET, SECRET2,
     },
-  }),
-),
+  }))
+);
 
 app.use('/graphiql', graphiqlExpress({ endpointURL: graphqlEndpoint }));
 

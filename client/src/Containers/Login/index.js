@@ -1,7 +1,14 @@
 import React from 'react';
 import { extendObservable } from 'mobx';
 import { observer } from 'mobx-react';
-import { Message, Form, Button, Input, Container, Header } from 'semantic-ui-react';
+import {
+  Message,
+  Form,
+  Button,
+  Input,
+  Container,
+  Header,
+} from 'semantic-ui-react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
@@ -22,7 +29,7 @@ class Login extends React.Component {
       variables: { email, password },
     });
 
-    console.log(response);
+    // console.log(response);
 
     const {
       ok, token, refreshToken, errors,
@@ -62,7 +69,9 @@ class Login extends React.Component {
 
     return (
       <Container text>
-        <Header as="h2">Login</Header>
+        <Header as="h2">
+          Login
+        </Header>
         <Form>
           <Form.Field error={!!emailError}>
             <Input name="email" onChange={this.onChange} value={email} placeholder="Email" fluid />
@@ -77,7 +86,9 @@ class Login extends React.Component {
               fluid
             />
           </Form.Field>
-          <Button onClick={this.onSubmit}>Submit</Button>
+          <Button onClick={this.onSubmit}>
+            Submit
+          </Button>
         </Form>
         {errorList.length ? (
           <Message error header="There was some errors with your submission" list={errorList} />

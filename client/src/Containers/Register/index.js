@@ -1,7 +1,14 @@
 import React from 'react';
-import { Form, Message, Button, Input, Container, Header } from 'semantic-ui-react';
+import {
+  Form,
+  Message,
+  Button,
+  Input,
+  Container,
+  Header,
+} from 'semantic-ui-react';
 import { graphql } from 'react-apollo';
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 class Register extends React.Component {
   state = {
@@ -39,7 +46,7 @@ class Register extends React.Component {
       this.setState(err);
     }
 
-    console.log(response);
+    // console.log(response);
   };
 
   onChange = (e) => {
@@ -69,7 +76,9 @@ class Register extends React.Component {
 
     return (
       <Container text>
-        <Header as="h2">Register</Header>
+        <Header as="h2">
+          Register
+        </Header>
         <Form>
           <Form.Field error={!!usernameError}>
             <Input
@@ -93,7 +102,9 @@ class Register extends React.Component {
               fluid
             />
           </Form.Field>
-          <Button onClick={this.onSubmit}>Submit</Button>
+          <Button onClick={this.onSubmit}>
+            Submit
+          </Button>
         </Form>
         {errorList.length ? (
           <Message error header="There was some errors with your submission" list={errorList} />

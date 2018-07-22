@@ -1,7 +1,14 @@
 import React from 'react';
 import { extendObservable } from 'mobx';
 import { observer } from 'mobx-react';
-import { Message, Form, Button, Input, Container, Header } from 'semantic-ui-react';
+import {
+  Message,
+  Form,
+  Button,
+  Input,
+  Container,
+  Header,
+} from 'semantic-ui-react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
@@ -21,7 +28,7 @@ class CreateTeam extends React.Component {
       variables: { name },
     });
 
-    console.log(response);
+    // console.log(response);S
 
     const { ok, errors } = response.data.createTeam;
 
@@ -53,12 +60,16 @@ class CreateTeam extends React.Component {
 
     return (
       <Container text>
-        <Header as="h2">Create a team</Header>
+        <Header as="h2">
+          Create a team
+        </Header>
         <Form>
           <Form.Field error={!!nameError}>
             <Input name="name" onChange={this.onChange} value={name} placeholder="Name" fluid />
           </Form.Field>
-          <Button onClick={this.onSubmit}>Submit</Button>
+          <Button onClick={this.onSubmit}>
+            Submit
+          </Button>
         </Form>
         {errorList.length ? (
           <Message error header="There was some errors with your submission" list={errorList} />
